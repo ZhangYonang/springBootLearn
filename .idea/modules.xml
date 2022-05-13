@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/springboot.iml" filepath="$PROJECT_DIR$/.idea/springboot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-data/springboot-data.iml" filepath="$PROJECT_DIR$/springboot-data/springboot-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_1/springboot_1.iml" filepath="$PROJECT_DIR$/springboot_1/springboot_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_mybatis/springboot_mybatis.iml" filepath="$PROJECT_DIR$/springboot_mybatis/springboot_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_security/springboot_security.iml" filepath="$PROJECT_DIR$/springboot_security/springboot_security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_shiro/springboot_shiro.iml" filepath="$PROJECT_DIR$/springboot_shiro/springboot_shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_swag/springboot_swag.iml" filepath="$PROJECT_DIR$/springboot_swag/springboot_swag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_yiburenwu/springboot_yiburenwu.iml" filepath="$PROJECT_DIR$/springboot_yiburenwu/springboot_yiburenwu.iml" />
+    </modules>
+  </component>
+</project>

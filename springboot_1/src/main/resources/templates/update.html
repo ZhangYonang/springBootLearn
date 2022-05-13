@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title> AILI </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link th:href="@{/css/css2.css}" rel="stylesheet">
+
+    <link th:href="@{/css/all.min.css}" rel="stylesheet">
+    <link th:href="@{/css/bootstrap-icons.css}" rel="stylesheet">
+
+    <link th:href="@{/css/owl.carousel.min.css}" rel="stylesheet">
+    <link th:href="@{/css/tempusdominus-bootstrap-4.min.css}" rel="stylesheet">
+
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <style>
+</style>
+
+</head>
+<body>
+<div class="container-fluid position-relative d-flex p-0">
+
+    <div id="spinner"
+         class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <div th:insert="~{commons::sidebar}"></div>
+
+
+    <div class="content">
+
+        <div th:insert="~{commons::headbar}"></div>
+
+
+        <div class="container-fluid pt-4 px-4">
+
+                    <div class="bg-secondary rounded h-100 p-4">
+                        <h6 class="mb-4">Basic Form</h6>
+                        <form th:action="@{/updateemp}" method="post">
+                            <input type="hidden" name="id" th:value="${update.getId()}">
+                            <div class="mb-3">
+                                <label  class="form-label" th:text="#{index.lastname}">LAST NAME</label>
+                                <input th:value="${update.getLastName()}" type="text" class="form-control" name="lastName" >
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-label" th:text="#{index.email}">EMAIL</label>
+                                <input th:value="${update.getEmail()}" type="text" class="form-control" name="email" >
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-label" th:text="#{index.sex}">SEX</label>
+                                <input th:value="${update.getSex()}" type="text" class="form-control" name="sex">
+                            </div>
+                            <div>
+                                <label  class="form-label" th:text="#{index.department}">DEPARTMENT</label>
+                                <select th:value="${update.getDepartment().getId()}" th:selected="${update.getDepartment().getId()}" class="form-select mb-3" aria-label="Default select example" name="department.id">
+                                    <option></option>
+                                    <option value="101">One</option>
+                                    <option value="102">Two</option>
+                                    <option value="103">Three</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-label" th:text="#{index.birth}">BIRTH</label>
+                                <input th:value="${#dates.format(update.getBirth(),'yyyy/MM/dd HH:mm')}" type="text" class="form-control" name="birth" >
+                            </div>
+                            <button type="submit" class="btn btn-primary" th:text="#{index.update}">UPDATE</button>
+                        </form>
+                    </div>
+                </div>
+        <!--尾部-->
+        <div class="container-fluid pt-4 px-4" th:fragment="down">
+            <div class="bg-secondary rounded-top p-4">
+                <div class="row">
+                    <div class="col-12 col-sm-6 text-center text-sm-start">
+                        <div>
+                            <a class="btn btn-sm" th:href="@{/add(l='zh_CN')}">简体中文</a>
+                            <a> | </a>
+                            <a class="btn btn-sm" th:href="@{/add(l='en_UC')}">English</a>
+                            <br>
+                            <br>
+                            <a>Copyright &copy; 2022.Company 爱莉 All rights reserved.</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 text-center text-sm-end">
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+
+        </div>
+        </div>
+
+<script th:src="@{/js/jquery-3.4.1.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/chart.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/easing.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/waypoints.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/owl.carousel.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/moment.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/moment-timezone.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/tempusdominus-bootstrap-4.min.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+
+<script th:src="@{/js/main.js}" type="873b6637b889f1f181771fc9-text/javascript"></script>
+<script th:src="@{/js/rocket-loader.min.js}" data-cf-settings="873b6637b889f1f181771fc9-|49" defer=""></script>
+</body>
+</html>

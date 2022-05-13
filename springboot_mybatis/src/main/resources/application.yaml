@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: bootData
+    password: zya20010922
+    url: jdbc:mysql://www.ailixiya.xyz:3306/bootdata?useUnicod=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# 整合mybatis
+mybatis:
+  type-aliases-package: com.aili.springboot_mybatis.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
